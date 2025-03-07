@@ -88,3 +88,13 @@ ax.grid(which = "major", linewidth = 1)
 ax.grid(which = "minor", linewidth = 0.3)
 ax.minorticks_on()
 plt.show()
+
+# ---------------BARH CHART -----------------------
+
+fig, ax = plt.subplots()
+ax.barh(y = categorias, width = valores)
+plt.show()
+
+
+
+
