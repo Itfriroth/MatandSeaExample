@@ -93,6 +93,8 @@ plt.show()
 
 fig, ax = plt.subplots()
 ax.barh(y = categorias, width = valores)
+# grid transparency
+ax.grid(linewidth = 1.7, alpha = 0.35)
 plt.show()
 
 
