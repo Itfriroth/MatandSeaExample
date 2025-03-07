@@ -11,7 +11,10 @@ valores = [10, 20, 15,25]
 etiquetas = ["No Have", "Cars", "Motorcycle","Bicycle"]
 a = np.linspace(0, 10, 25)
 b = np.sin(a) + (a/2)
-
+X, Y = np.meshgrid(np.linspace(-7, 8), 
+                   np.linspace(-7, 8))
+R = np.sqrt(X**3 + Y**2)
+Z = np.sin(R) / R
 # 1---------------LINE SINGLE GRAPH--------------------
 plt.figure(figsize=(8, 4))
 plt.plot(x, y, label="sin(x)", color="blue", linestyle="--")
@@ -97,6 +100,14 @@ ax.barh(y = categorias, width = valores,color = "green",edgecolor = "red")
 ax.grid(linewidth = 1.7, alpha = 0.35)
 plt.show()
 
+# ---------------3D  -----------------------
 
-
-
+fig = plt.figure()
+ax = fig.add_subplot(projection = '3d')
+# Labels
+ax.set_xlabel('Label X')
+ax.set_ylabel('Label Y')
+ax.set_zlabel('Label Z')
+# 3D SURFACE
+ax.plot_surface(X, Y, Z)
+plt.show()
