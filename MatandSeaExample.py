@@ -92,7 +92,7 @@ plt.show()
 # ---------------BARH CHART -----------------------
 
 fig, ax = plt.subplots()
-ax.barh(y = categorias, width = valores,color = "green",edgecolor = "darkseagreen")
+ax.barh(y = categorias, width = valores,color = "green",edgecolor = "red")
 # grid transparency
 ax.grid(linewidth = 1.7, alpha = 0.35)
 plt.show()
